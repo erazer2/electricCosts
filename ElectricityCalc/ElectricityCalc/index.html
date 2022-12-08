@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+
+    <link id="styleToUse" rel="stylesheet" href="simpleStyle.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Usage Calc</title>
+    <script src="interface.js"></script>
+    <script src="calculations.js"></script>
+
+    
+</head>
+<body>
+
+<div id="menu"> 
+
+</div>    
+
+
+<div id="mainCalculatorBox">
+
+    <h2 id="mainHeader">Electricity Usage Calc</h2>
+    
+  
+
+    <div id="calculationsBit">
+
+        <div id="calculatorBrief">See how much electricity your item uses
+
+<div id="inputsPart">
+
+ 
+<hr style="width:50%">
+
+<div id="TimerSection">
+  
+    
+    <div class="inputTitle">Watts Of Item</div>
+    <input class="dataEntryBox" id="watts" value="3000"></input>
+    <div class="unitsTitle">Watts</div> 
+    <br>
+
+
+    <div class="inputTitle">Cost Per KWHr</div>
+    <input class="dataEntryBox" value="0.34" id="unitCostPerKWHr"></input>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+    <div class="inputTitle">Hours A Day</div>
+    <input class="dataEntryBox" value="1" id="hrsPerDay"></input>
+    <div class="unitsTitle">Hrs</div> 
+    <br>
+
+
+
+    <div class="inputTitle">Annual Cost</div>
+    <div class="dataEntryBox" id="annualCost"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+    <div class="inputTitle">Monthly Cost</div>
+    <div class="dataEntryBox" id="monthlyCost"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+<div onclick="revealClicked();"id="reveal">Show Details</div>
+
+<br>
+<input id="itemName">
+<button onClick="addItemToList();">Add Item To List</button>
+<button onClick="clearList();">Clear List</button>
+<input id="itemToClear" value="0"><button onClick="clearItem();">Clear Item</button>
+
+
+</div>
+    <div id="details">
+
+    
+        
+
+</div>
+
+    
+</div>
+
+
+
+
+
+
+</div>
+
+
+ 
+
+
+</div>
+
+<br>
+
+
+
+
+
+</body>
+<script>
+ 
+ 
+
+ document.getElementById("watts").addEventListener("keyup",calcAnnualCost);
+ document.getElementById("unitCostPerKWHr").addEventListener("keyup",calcAnnualCost);
+ document.getElementById("hrsPerDay").addEventListener("keyup",calcAnnualCost);
+
+ calcAnnualCost();
+
+ hideDetails();
+
+
+</script>
+
+</html>
